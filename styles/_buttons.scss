@@ -1,0 +1,238 @@
+$ease-out-circ: cubic-bezier(0.08, 0.82, 0.17, 1);
+
+[ant-click-animating-without-extra-node='true']:after {
+  animation: test2 2s $ease-out-circ, test 0.4s $ease-out-circ !important;
+}
+
+.ant-btn {
+  display: inline-flex !important;
+  justify-content: center;
+  align-items: center;
+  vertical-align: middle;
+  line-height: 1 !important;
+  &:not(.ant-btn-lg) {
+    font-size: 12px;
+  }
+  &.ant-btn-default {
+    min-width: 28px;
+    svg {
+      width: 18px;
+      height: 18px;
+    }
+    &.ant-btn-icon {
+      max-width: 28px;
+      padding: 0;
+    }
+  }
+  &.ant-btn-sm {
+    min-width: 24px;
+    svg {
+      width: 16px;
+      height: 16px;
+    }
+    &.ant-btn-icon {
+      max-width: 24px;
+      padding: 0;
+    }
+  }
+  &.ant-btn-lg {
+    min-width: 36px;
+    svg {
+      width: 20px;
+      height: 20px;
+    }
+    &.ant-btn-icon {
+      max-width: 36px;
+      padding: 0;
+    }
+  }
+  &.ant-btn-outline {
+    box-shadow: none;
+  }
+  &.ant-btn-default {
+    border: none;
+    &:not([disabled]) {
+      &:not(.ant-btn-outline) {
+        color: $white;
+        background-color: $brandSecondaryLight;
+        path {
+          fill: $white !important;
+        }
+        &:hover:not(.active),
+        &:focus:not(.active) {
+          color: $white;
+          background-color: darken($brandSecondaryLight, 10%);
+          path {
+            fill: $white !important;
+          }
+        }
+      }
+      &.ant-btn-outline {
+        color: $black;
+        background-color: $white;
+        border: 1px solid $brandSecondaryLighter;
+        path {
+          fill: $black !important;
+        }
+        &:hover:not(.active),
+        &:focus:not(.active) {
+          color: $black;
+          background-color: $brandSecondaryLightest;
+          path {
+            fill: $black !important;
+          }
+        }
+      }
+      &.active {
+        background-color: $brandSecondaryLight;
+        color: $white;
+        path {
+          fill: $white !important;
+        }
+      }
+    }
+  }
+  &.ant-btn-primary {
+    border: none;
+    &:not([disabled]) {
+      &:not(.ant-btn-outline) {
+        background-color: $brandPrimary;
+        color: $white;
+        path {
+          fill: $white !important;
+        }
+        &:hover:not(.active),
+        &:focus:not(.active) {
+          color: $white;
+          background-color: lighten($brandPrimary, 10%);
+          path {
+            fill: $white !important;
+          }
+        }
+      }
+      &.ant-btn-outline {
+        color: $brandPrimary;
+        border: 1px solid rgba(0, 0, 0, 0.1);
+        background-color: $brandPrimaryLightest;
+        path {
+          fill: $brandPrimary !important;
+        }
+        &:hover:not(.active),
+        &:focus:not(.active) {
+          color: $brandPrimary;
+          background-color: darken($brandPrimaryLightest, 2%);
+          path {
+            fill: $brandPrimary !important;
+          }
+        }
+      }
+      &.active {
+        background-color: $brandPrimary;
+        color: $white;
+        path {
+          fill: $white !important;
+        }
+      }
+    }
+  }
+  &.ant-btn-warning {
+    &:not([disabled]) {
+      border: none;
+      &:not(.ant-btn-outline) {
+        color: $white;
+        background-color: $accentWarning;
+        path {
+          fill: $white !important;
+        }
+        &:hover:not(.active),
+        &:focus:not(.active) {
+          color: $white;
+          background-color: darken($accentWarning, 2%);
+          path {
+            fill: $white !important;
+          }
+        }
+      }
+      &.ant-btn-outline {
+        color: $accentWarning;
+        border: 1px solid rgba(0, 0, 0, 0.1);
+        background-color: $accentWarningLightest;
+        path {
+          fill: $accentWarning !important;
+        }
+        &:hover:not(.active),
+        &:focus:not(.active) {
+          color: $accentWarning;
+          background-color: darken($accentWarningLightest, 2%);
+          path {
+            fill: $accentWarning !important;
+          }
+        }
+      }
+      &.active {
+        background-color: $accentWarning;
+        color: $white;
+        path {
+          fill: $white !important;
+        }
+      }
+    }
+  }
+  &.ant-btn-dangerous, &.ant-btn-danger {
+    border: none;
+    &:not([disabled]) {
+      &:not(.ant-btn-outline) {
+        color: $white;
+        background-color: $accentDanger;
+        path {
+          fill: $white !important;
+        }
+        &:hover:not(.active),
+        &:focus:not(.active) {
+          color: $white;
+          background-color: darken($accentDanger, 2%);
+          path {
+            fill: $white !important;
+          }
+        }
+      }
+      &.ant-btn-outline {
+        color: $accentDanger;
+        border: 1px solid rgba(0, 0, 0, 0.1);
+        background-color: $accentDangerLightest;
+        path {
+          fill: $accentDanger !important;
+        }
+        &:hover:not(.active),
+        &:focus:not(.active) {
+          color: $accentDanger;
+          background-color: darken($accentDangerLightest, 2%);
+          path {
+            fill: $accentDanger !important;
+          }
+        }
+      }
+      &.active {
+        color: $white;
+        background-color: $accentDanger;
+        path {
+          fill: $white !important;
+        }
+      }
+    }
+  }
+  &.ant-btn-link {
+    span {
+      color: $accentBlue;
+      text-decoration: underline;
+    }
+    &.active {
+      color: $accentBlueLight;
+    }
+    &:hover {
+      span {
+        color: $accentBlueDark;
+      }
+    }
+  }
+}
