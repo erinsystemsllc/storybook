@@ -15,6 +15,30 @@ $ease-out-circ: cubic-bezier(0.08, 0.82, 0.17, 1);
   }
   &.ant-btn-default {
     min-width: 28px;
+    border: none;
+    &:not([disabled]) {
+      color: $brandPrimaryLight;
+      background-color: $white;
+      border: 1px solid $brandPrimaryLight;
+      path {
+        fill: $black !important;
+      }
+      &:hover:not(.active),
+      &:focus:not(.active) {
+        color: $brandPrimaryLight;
+        background-color: lighten($brandPrimaryLightest, 35%);
+        path {
+          fill: $black !important;
+        }
+      }
+      &.active {
+        background-color: $brandSecondaryLight;
+        color: $white;
+        path {
+          fill: $white !important;
+        }
+      }
+    }
     svg {
       width: 18px;
       height: 18px;
@@ -49,54 +73,11 @@ $ease-out-circ: cubic-bezier(0.08, 0.82, 0.17, 1);
   &.ant-btn-outline {
     box-shadow: none;
   }
-  &.ant-btn-default {
-    border: none;
-    &:not([disabled]) {
-      &:not(.ant-btn-outline) {
-        color: $white;
-        background-color: $brandSecondaryLight;
-        path {
-          fill: $white !important;
-        }
-        &:hover:not(.active),
-        &:focus:not(.active) {
-          color: $white;
-          background-color: darken($brandSecondaryLight, 10%);
-          path {
-            fill: $white !important;
-          }
-        }
-      }
-      &.ant-btn-outline {
-        color: $black;
-        background-color: $white;
-        border: 1px solid $brandSecondaryLighter;
-        path {
-          fill: $black !important;
-        }
-        &:hover:not(.active),
-        &:focus:not(.active) {
-          color: $black;
-          background-color: $brandSecondaryLightest;
-          path {
-            fill: $black !important;
-          }
-        }
-      }
-      &.active {
-        background-color: $brandSecondaryLight;
-        color: $white;
-        path {
-          fill: $white !important;
-        }
-      }
-    }
-  }
   &.ant-btn-primary {
     border: none;
     &:not([disabled]) {
       &:not(.ant-btn-outline) {
-        background-color: $brandPrimary;
+        background-color: $brandPrimaryLight;
         color: $white;
         path {
           fill: $white !important;
@@ -107,22 +88,6 @@ $ease-out-circ: cubic-bezier(0.08, 0.82, 0.17, 1);
           background-color: lighten($brandPrimary, 10%);
           path {
             fill: $white !important;
-          }
-        }
-      }
-      &.ant-btn-outline {
-        color: $brandPrimary;
-        border: 1px solid rgba(0, 0, 0, 0.1);
-        background-color: $brandPrimaryLightest;
-        path {
-          fill: $brandPrimary !important;
-        }
-        &:hover:not(.active),
-        &:focus:not(.active) {
-          color: $brandPrimary;
-          background-color: darken($brandPrimaryLightest, 2%);
-          path {
-            fill: $brandPrimary !important;
           }
         }
       }
@@ -138,39 +103,21 @@ $ease-out-circ: cubic-bezier(0.08, 0.82, 0.17, 1);
   &.ant-btn-warning {
     &:not([disabled]) {
       border: none;
-      &:not(.ant-btn-outline) {
+      color: $white;
+      background-color: $warning;
+      path {
+        fill: $white !important;
+      }
+      &:hover:not(.active),
+      &:focus:not(.active) {
         color: $white;
-        background-color: $accentWarning;
+        background-color: darken($warning, 5%);
         path {
           fill: $white !important;
         }
-        &:hover:not(.active),
-        &:focus:not(.active) {
-          color: $white;
-          background-color: darken($accentWarning, 2%);
-          path {
-            fill: $white !important;
-          }
-        }
-      }
-      &.ant-btn-outline {
-        color: $accentWarning;
-        border: 1px solid rgba(0, 0, 0, 0.1);
-        background-color: $accentWarningLightest;
-        path {
-          fill: $accentWarning !important;
-        }
-        &:hover:not(.active),
-        &:focus:not(.active) {
-          color: $accentWarning;
-          background-color: darken($accentWarningLightest, 2%);
-          path {
-            fill: $accentWarning !important;
-          }
-        }
       }
       &.active {
-        background-color: $accentWarning;
+        background-color: $warning;
         color: $white;
         path {
           fill: $white !important;
@@ -179,42 +126,24 @@ $ease-out-circ: cubic-bezier(0.08, 0.82, 0.17, 1);
     }
   }
   &.ant-btn-dangerous, &.ant-btn-danger {
-    border: none;
+    border: none !important;
     &:not([disabled]) {
-      &:not(.ant-btn-outline) {
+      color: $white;
+      background-color: $danger;
+      path {
+        fill: $white !important;
+      }
+      &:hover:not(.active),
+      &:focus:not(.active) {
         color: $white;
-        background-color: $accentDanger;
+        background-color: darken($danger, 5%);
         path {
           fill: $white !important;
-        }
-        &:hover:not(.active),
-        &:focus:not(.active) {
-          color: $white;
-          background-color: darken($accentDanger, 2%);
-          path {
-            fill: $white !important;
-          }
-        }
-      }
-      &.ant-btn-outline {
-        color: $accentDanger;
-        border: 1px solid rgba(0, 0, 0, 0.1);
-        background-color: $accentDangerLightest;
-        path {
-          fill: $accentDanger !important;
-        }
-        &:hover:not(.active),
-        &:focus:not(.active) {
-          color: $accentDanger;
-          background-color: darken($accentDangerLightest, 2%);
-          path {
-            fill: $accentDanger !important;
-          }
         }
       }
       &.active {
         color: $white;
-        background-color: $accentDanger;
+        background-color: $danger;
         path {
           fill: $white !important;
         }
@@ -223,16 +152,24 @@ $ease-out-circ: cubic-bezier(0.08, 0.82, 0.17, 1);
   }
   &.ant-btn-link {
     span {
-      color: $accentBlue;
+      color: $info;
       text-decoration: underline;
     }
     &.active {
-      color: $accentBlueLight;
+      color: $infoLight;
     }
     &:hover {
       span {
-        color: $accentBlueDark;
+        color: $infoDark;
       }
+    }
+  }
+  &.ant-btn-dashed {
+    color: $brandPrimaryLightest;
+    border-color: $brandPrimaryLightest;
+    &:hover {
+      color: $brandPrimary;
+      border-color: $brandPrimary;
     }
   }
 }
