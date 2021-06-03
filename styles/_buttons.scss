@@ -20,23 +20,17 @@ $ease-out-circ: cubic-bezier(0.08, 0.82, 0.17, 1);
       color: $brandPrimaryLight;
       background-color: $white;
       border: 1px solid $brandPrimaryLight;
-      path {
-        fill: $black !important;
+      path:not([fill]) {
+        fill: $brandPrimaryLight !important;
       }
       &:hover:not(.active),
       &:focus:not(.active) {
         color: $brandPrimaryLight;
         background-color: lighten($brandPrimaryLightest, 35%);
-        path {
-          fill: $black !important;
-        }
       }
       &.active {
         background-color: $brandSecondaryLight;
         color: $white;
-        path {
-          fill: $white !important;
-        }
       }
     }
     svg {
@@ -79,49 +73,41 @@ $ease-out-circ: cubic-bezier(0.08, 0.82, 0.17, 1);
       &:not(.ant-btn-outline) {
         background-color: $brandPrimaryLight;
         color: $white;
-        path {
+        path:not([fill]) {
           fill: $white !important;
         }
         &:hover:not(.active),
         &:focus:not(.active) {
           color: $white;
           background-color: lighten($brandPrimary, 10%);
-          path {
-            fill: $white !important;
-          }
         }
       }
       &.active {
         background-color: $brandPrimary;
         color: $white;
-        path {
-          fill: $white !important;
-        }
       }
+    }
+    svg {
+      width: 18px;
+      height: 18px;
     }
   }
   &.ant-btn-warning {
     &:not([disabled]) {
       border: none;
-      color: $white;
-      background-color: $warning;
-      path {
+      color: $white !important;
+      background-color: $warning !important;
+      path:not([fill]) {
         fill: $white !important;
       }
       &:hover:not(.active),
       &:focus:not(.active) {
-        color: $white;
-        background-color: darken($warning, 5%);
-        path {
-          fill: $white !important;
-        }
+        color: $white !important;
+        background-color: darken($warning, 5%) !important;
       }
       &.active {
-        background-color: $warning;
-        color: $white;
-        path {
-          fill: $white !important;
-        }
+        background-color: $warning !important;
+        color: $white !important;
       }
     }
   }
@@ -129,24 +115,18 @@ $ease-out-circ: cubic-bezier(0.08, 0.82, 0.17, 1);
     border: none !important;
     &:not([disabled]) {
       color: $white;
-      background-color: $danger;
-      path {
+      background-color: $danger !important;
+      path:not([fill]) {
         fill: $white !important;
       }
       &:hover:not(.active),
       &:focus:not(.active) {
         color: $white;
-        background-color: darken($danger, 5%);
-        path {
-          fill: $white !important;
-        }
+        background-color: darken($danger, 5%) !important;
       }
       &.active {
-        color: $white;
-        background-color: $danger;
-        path {
-          fill: $white !important;
-        }
+        color: $white !important;
+        background-color: $danger !important;
       }
     }
   }
@@ -156,20 +136,27 @@ $ease-out-circ: cubic-bezier(0.08, 0.82, 0.17, 1);
       text-decoration: underline;
     }
     &.active {
-      color: $infoLight;
+      color: $infoLight !important;
     }
     &:hover {
       span {
-        color: $infoDark;
+        color: $infoDark !important;
       }
     }
   }
   &.ant-btn-dashed {
     color: $brandPrimaryLightest;
     border-color: $brandPrimaryLightest;
+    path:not([fill]) {
+      fill: $brandPrimaryLightest !important;
+    }
     &:hover {
       color: $brandPrimary;
       border-color: $brandPrimary;
+    }
+    svg {
+      width: 18px;
+      height: 18px;
     }
   }
 }

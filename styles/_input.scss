@@ -1,0 +1,59 @@
+.ant-input:not(.ant-input:disabled):not(.ant-input-affix-wrapper .ant-input) {
+  border: 1px solid $gray;
+  &:focus {
+    border-color: $brandPrimaryLight !important;
+    box-shadow: 0 0 4px 2px rgba($black, 0.1) !important;
+  }
+}
+.ant-input {
+  &.ant-input-sm {
+    font-size: 12px !important;
+  }
+  &.ant-input-lg {
+    font-size: 14px !important;
+    padding: 6px 8px;
+  }
+  &::placeholder {
+    color: $gray !important;
+  }
+}
+.ant-input:disabled {
+  opacity: 0.7;
+  border: 1px solid $gray !important;
+}
+.ant-input-affix-wrapper {
+  border: 1px solid $gray !important;
+  box-shadow: none !important;
+  .ant-input-prefix {
+    display: flex;
+    align-items: center;
+  }
+  .ant-input-prefix :not(.anticon),
+  .ant-input-suffix :not(.anticon) {
+    line-height: 1 !important;
+  }
+  &.ant-input {
+    border-color: none !important;
+    box-shadow: none !important;
+  }
+  &::placeholder {
+    color: $gray !important;
+  }
+}
+
+.ant-input-affix-wrapper-focused {
+  border-color: $brandPrimaryLight !important;
+}
+
+.ant-input-affix-wrapper > input.ant-input {
+  padding-left: 8px !important;
+}
+
+.ant-input-group-wrapper {
+  &.ant-input-group-wrapper-lg {
+    .ant-input-group-addon {
+      min-width: 36px;
+      font-weight: 500;
+    }
+  }
+}
