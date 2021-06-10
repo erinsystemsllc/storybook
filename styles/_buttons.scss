@@ -130,6 +130,12 @@ $ease-out-circ: cubic-bezier(0.08, 0.82, 0.17, 1);
       }
     }
   }
+  &.ant-btn-ghost {
+    &:hover, &:focus {
+      color: $brandPrimary !important;
+      border-color: $brandPrimary !important;
+    }
+  }
   &.ant-btn-link {
     span {
       color: $info;
@@ -150,9 +156,9 @@ $ease-out-circ: cubic-bezier(0.08, 0.82, 0.17, 1);
     path:not([fill]) {
       fill: $brandPrimaryLightest !important;
     }
-    &:hover {
-      color: $brandPrimary;
-      border-color: $brandPrimary;
+    &:hover, &:focus {
+      color: $brandPrimary !important;
+      border-color: $brandPrimary !important;
     }
     svg {
       width: 18px;
